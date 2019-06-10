@@ -1,3 +1,35 @@
-PODFILE CHECKSUM: ce527f899bf1b8a2dcdef6ba53a0c23bbd679cd9
+PODS:
+  - A (1.0.1):
+    - B_Category
+    - HandyFrame
+  - A_Category (1.0.1):
+    - CTMediator
+  - B_Category (1.1):
+    - CTMediator
+  - CTMediator (25)
+  - HandyFrame (1.2.0)
+
+DEPENDENCIES:
+  - A
+  - A_Category
+  - HandyFrame
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - B_Category
+    - CTMediator
+    - HandyFrame
+  https://github.com/kymodular/PrivatePods.git:
+    - A
+    - A_Category
+
+SPEC CHECKSUMS:
+  A: 53b16c8e8f8a27048f2c248e9a1d92152319bc3c
+  A_Category: afb9cd5022da1dae7c90503c47d2f939db1cf932
+  B_Category: d643bbbb97fcb1271c9f298a762a385d1c3e7bf9
+  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
+  HandyFrame: 437df83ba7563c56cd55b9bd0128561995463110
+
+PODFILE CHECKSUM: 5b01c918f19cb64111e8cb9fb5069ab1d7d62476
 
 COCOAPODS: 1.6.1
