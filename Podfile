@@ -5,11 +5,18 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'MainProject' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+  use_frameworks!
 
   # Pods for MainProject
   pod "A_Category"
   pod "A"
+#  pod "D_Category", :path=> "../D_Category"
+  pod "D_Category"
+  pod "D"
+  
+  pod "RNModule_Category"
+  pod "RNModule"
+  
   pod 'HandyFrame'
 
   target 'MainProjectTests' do

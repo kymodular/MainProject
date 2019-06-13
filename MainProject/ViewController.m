@@ -10,6 +10,7 @@
 #import <HandyFrame/UIView+LayoutMethods.h>
 #import "CTMediator+A.h"
 #import "CTMediator.h"
+#import "CTMediator+RNModule.h"
 
 @interface ViewController ()
 
@@ -24,6 +25,14 @@
 {
     [super viewDidLoad];
     [self.view addSubview:self.pushAViewControllerButton];
+    
+    UIButton *btn = [[UIButton alloc] init];
+    btn.frame = CGRectMake(100, 100, 200, 40);
+    btn.center = CGPointMake(self.view.center.x, self.view.center.y + 80);
+    [btn setTitle:@"go RNViewController" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(gotoRN:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
 - (void)viewWillLayoutSubviews
@@ -43,6 +52,12 @@
     UIViewController *viewController = [[CTMediator sharedInstance] A_aViewController];
     [self.navigationController pushViewController:viewController animated:YES];
 }
+
+- (void)gotoRN:(id)sender {
+    UIViewController *viewController = [[CTMediator sharedInstance] RNModule_viewController];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 
 #pragma mark - getters and setters
 - (UIButton *)pushAViewControllerButton

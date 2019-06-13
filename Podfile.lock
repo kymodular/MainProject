@@ -6,30 +6,119 @@ PODS:
     - CTMediator
   - B_Category (1.1):
     - CTMediator
+  - boost-for-react-native (1.63.0)
   - CTMediator (25)
+  - D (5)
+  - D_Category (2):
+    - CTMediator
+  - DoubleConversion (1.1.6)
+  - Folly (2018.10.22.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+  - glog (0.3.5)
   - HandyFrame (1.2.0)
+  - React/Core (0.59.9):
+    - yoga (= 0.59.9.React)
+  - React/CxxBridge (0.59.9):
+    - Folly (= 2018.10.22.00)
+    - React/Core
+    - React/cxxreact
+    - React/jsiexecutor
+  - React/cxxreact (0.59.9):
+    - boost-for-react-native (= 1.63.0)
+    - DoubleConversion
+    - Folly (= 2018.10.22.00)
+    - glog
+    - React/jsinspector
+  - React/DevSupport (0.59.9):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.59.9)
+  - React/jsi (0.59.9):
+    - DoubleConversion
+    - Folly (= 2018.10.22.00)
+    - glog
+  - React/jsiexecutor (0.59.9):
+    - DoubleConversion
+    - Folly (= 2018.10.22.00)
+    - glog
+    - React/cxxreact
+    - React/jsi
+  - React/jsinspector (0.59.9)
+  - React/RCTAnimation (0.59.9):
+    - React/Core
+  - React/RCTBlob (0.59.9):
+    - React/Core
+  - React/RCTNetwork (0.59.9):
+    - React/Core
+  - React/RCTText (0.59.9):
+    - React/Core
+  - React/RCTWebSocket (0.59.9):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - RNModule (6):
+    - DoubleConversion
+    - Folly
+    - glog
+    - React/Core
+    - React/CxxBridge
+    - React/DevSupport
+    - React/RCTAnimation
+    - React/RCTNetwork
+    - React/RCTText
+    - React/RCTWebSocket
+    - yoga (= 0.59.9.React)
+  - RNModule_Category (3):
+    - CTMediator
+  - yoga (0.59.9.React)
 
 DEPENDENCIES:
   - A
   - A_Category
+  - D
+  - D_Category
   - HandyFrame
+  - RNModule
+  - RNModule_Category
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - B_Category
+    - boost-for-react-native
     - CTMediator
     - HandyFrame
   https://github.com/kymodular/PrivatePods.git:
     - A
     - A_Category
+    - D
+    - D_Category
+    - DoubleConversion
+    - Folly
+    - glog
+    - React
+    - RNModule
+    - RNModule_Category
+    - yoga
 
 SPEC CHECKSUMS:
   A: 53b16c8e8f8a27048f2c248e9a1d92152319bc3c
   A_Category: afb9cd5022da1dae7c90503c47d2f939db1cf932
   B_Category: d643bbbb97fcb1271c9f298a762a385d1c3e7bf9
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
+  D: f44bee26c34e4fb9cdcddad7aedc51938d40d5e7
+  D_Category: bb97c01727c4ead45ee1799b308e9f7822490ff3
+  DoubleConversion: f667477bface883238976991f46105fcacc96d56
+  Folly: 391015f9b49dcda4ab622abb43ee71ab77c96269
+  glog: f67a3d5e31bc6f31211e12ae7b2dfe87aa95c474
   HandyFrame: 437df83ba7563c56cd55b9bd0128561995463110
+  React: b84aaa62d5d686182b1316a107844ae79481eba8
+  RNModule: f452c3530fbf09ab644098c5c34c31049f5a3bf7
+  RNModule_Category: e6ea636501bc1ab5c725d63af074a132c37e0c35
+  yoga: add25c5694c2e5cd322c007b14dbf4802308cee7
 
-PODFILE CHECKSUM: 5b01c918f19cb64111e8cb9fb5069ab1d7d62476
+PODFILE CHECKSUM: 0b810f5b545ff3e1efcb0df894fe6b7109632353
 
 COCOAPODS: 1.6.1
