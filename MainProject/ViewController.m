@@ -2,7 +2,7 @@
 //  ViewController.m
 //  MainProject
 //
-//  Created by 王英辉 on 2019/6/6.
+//  Created by kyleboy on 2019/6/6.
 //  Copyright © 2019 kyleboy. All rights reserved.
 //
 
@@ -11,11 +11,17 @@
 #import "CTMediator+A.h"
 #import "CTMediator.h"
 #import "CTMediator+RNModule.h"
+#import "CTMediator+D.h"
 
-@interface ViewController ()
+static NSString * const kCellId = @"cell";
+
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UIButton *pushAViewControllerButton;
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+    
+@property (strong, nonatomic) NSArray *data;
+    
 @end
 
 @implementation ViewController
@@ -24,51 +30,65 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view addSubview:self.pushAViewControllerButton];
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.data.count;
+}
     
-    UIButton *btn = [[UIButton alloc] init];
-    btn.frame = CGRectMake(100, 100, 200, 40);
-    btn.center = CGPointMake(self.view.center.x, self.view.center.y + 80);
-    [btn setTitle:@"go RNViewController" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(gotoRN:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
-}
-
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self.pushAViewControllerButton sizeToFit];
-    [self.pushAViewControllerButton centerEqualToView:self.view];
-}
-
-#pragma mark - event response
-- (void)didTappedPushAViewControllerButton:(UIButton *)button
-{
-//    AViewController *viewController = [[AViewController alloc] init];
-//    [self.navigationController pushViewController:viewController animated:YES];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellId];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kCellId];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     
-    UIViewController *viewController = [[CTMediator sharedInstance] A_aViewController];
-    [self.navigationController pushViewController:viewController animated:YES];
+    NSDictionary *item = self.data[indexPath.row];
+    cell.textLabel.text = item[@"name"];
+    cell.detailTextLabel.text = item[@"description"];
+    return cell;
 }
-
-- (void)gotoRN:(id)sender {
-    UIViewController *viewController = [[CTMediator sharedInstance] RNModule_viewController];
-    [self.navigationController pushViewController:viewController animated:YES];
+    
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    switch (indexPath.row) {
+        case 0:
+        {
+        UIViewController *viewController = [[CTMediator sharedInstance] RNModule_viewController];
+        [self.navigationController pushViewController:viewController animated:YES];
+        }
+        break;
+        case 1:
+        {
+        UIViewController *viewController = [[CTMediator sharedInstance] A_aViewController];
+        [self.navigationController pushViewController:viewController animated:YES];
+        }
+        break;
+        case 2:
+        {
+        UIViewController *viewController = [[CTMediator sharedInstance] D_viewController];
+        [self.navigationController pushViewController:viewController animated:YES];
+        }
+        break;
+        default:
+        break;
+    }
 }
-
 
 #pragma mark - getters and setters
-- (UIButton *)pushAViewControllerButton
-{
-    if (_pushAViewControllerButton == nil) {
-        _pushAViewControllerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_pushAViewControllerButton setTitle:@"push A view controller" forState:UIControlStateNormal];
-        [_pushAViewControllerButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-        [_pushAViewControllerButton addTarget:self action:@selector(didTappedPushAViewControllerButton:) forControlEvents:UIControlEventTouchUpInside];
+- (NSArray *)data {
+    if (_data == nil) {
+        NSURL *moduleDataUrl = [[NSBundle mainBundle] URLForResource:@"ModuleData" withExtension:@"plist"];
+        NSDictionary *moduleDataDict = [NSDictionary dictionaryWithContentsOfURL:moduleDataUrl];
+        if (moduleDataDict) {
+            _data = [moduleDataDict objectForKey:@"modules"];
+        } else {
+            _data = @[];
+        }
     }
-    return _pushAViewControllerButton;
+    return _data;
 }
-
 @end

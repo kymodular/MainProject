@@ -16,8 +16,9 @@
 		660E24B922A9090900D66438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 660E24B822A9090900D66438 /* main.m */; };
 		660E24C322A9090900D66438 /* MainProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 660E24C222A9090900D66438 /* MainProjectTests.m */; };
 		660E24CE22A9090900D66438 /* MainProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 660E24CD22A9090900D66438 /* MainProjectUITests.m */; };
-		660E256322A921FC00D66438 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 660E256122A921FC00D66438 /* BViewController.m */; };
-		6638CC6222AE3AD300208301 /* Target_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 6638CC6122AE3AD300208301 /* Target_B.m */; };
+		66CBEE0A22B3B47F00375D7A /* ModuleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66CBEE0922B3B47F00375D7A /* ModuleData.plist */; };
+		66CBEE1122B3BA5200375D7A /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE1022B3BA5200375D7A /* BViewController.m */; };
+		66CBEE1522B3BA7A00375D7A /* Target_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE1422B3BA7A00375D7A /* Target_B.m */; };
 		74074BC07983B17991831FE1 /* Pods_MainProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4787C1284E64993B323B12 /* Pods_MainProjectUITests.framework */; };
 		8739AD56138898296D761752 /* Pods_MainProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BE3E2A701E7FCFB2566AA4 /* Pods_MainProject.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +48,7 @@
 		660E24A922A9090800D66438 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		660E24AA22A9090800D66438 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		660E24AC22A9090800D66438 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		660E24AD22A9090800D66438 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		660E24AD22A9090800D66438 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 0; };
 		660E24B022A9090800D66438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		660E24B222A9090900D66438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		660E24B522A9090900D66438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,11 +60,12 @@
 		660E24C922A9090900D66438 /* MainProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		660E24CD22A9090900D66438 /* MainProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainProjectUITests.m; sourceTree = "<group>"; };
 		660E24CF22A9090900D66438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		660E256022A921FC00D66438 /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
-		660E256122A921FC00D66438 /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
-		6638CC6022AE3AD300208301 /* Target_B.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_B.h; sourceTree = "<group>"; };
-		6638CC6122AE3AD300208301 /* Target_B.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_B.m; sourceTree = "<group>"; };
 		667815D122AE6FB00045FE09 /* MainProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		66CBEE0922B3B47F00375D7A /* ModuleData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ModuleData.plist; sourceTree = "<group>"; };
+		66CBEE0F22B3BA5200375D7A /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
+		66CBEE1022B3BA5200375D7A /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
+		66CBEE1322B3BA7A00375D7A /* Target_B.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_B.h; sourceTree = "<group>"; };
+		66CBEE1422B3BA7A00375D7A /* Target_B.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_B.m; sourceTree = "<group>"; };
 		79BE3E2A701E7FCFB2566AA4 /* Pods_MainProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC78760FE608D1A9E9283B4 /* Pods-MainProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainProject.debug.xcconfig"; path = "Target Support Files/Pods-MainProject/Pods-MainProject.debug.xcconfig"; sourceTree = "<group>"; };
 		954096631A576417C170794C /* Pods_MainProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +137,7 @@
 		660E24A822A9090800D66438 /* MainProject */ = {
 			isa = PBXGroup;
 			children = (
-				660E255F22A921FC00D66438 /* BViewController */,
+				66CBEE0E22B3BA5200375D7A /* BViewController */,
 				660E24A922A9090800D66438 /* AppDelegate.h */,
 				660E24AA22A9090800D66438 /* AppDelegate.m */,
 				660E24AC22A9090800D66438 /* ViewController.h */,
@@ -143,6 +145,7 @@
 				660E24AF22A9090800D66438 /* Main.storyboard */,
 				660E24B222A9090900D66438 /* Assets.xcassets */,
 				660E24B422A9090900D66438 /* LaunchScreen.storyboard */,
+				66CBEE0922B3B47F00375D7A /* ModuleData.plist */,
 				660E24B722A9090900D66438 /* Info.plist */,
 				660E24B822A9090900D66438 /* main.m */,
 				667815D122AE6FB00045FE09 /* MainProject-Bridging-Header.h */,
@@ -168,24 +171,23 @@
 			path = MainProjectUITests;
 			sourceTree = "<group>";
 		};
-		660E255F22A921FC00D66438 /* BViewController */ = {
+		66CBEE0E22B3BA5200375D7A /* BViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6638CC5F22AE3ABC00208301 /* Tagerts */,
-				660E256022A921FC00D66438 /* BViewController.h */,
-				660E256122A921FC00D66438 /* BViewController.m */,
+				66CBEE1222B3BA5C00375D7A /* Targets */,
+				66CBEE0F22B3BA5200375D7A /* BViewController.h */,
+				66CBEE1022B3BA5200375D7A /* BViewController.m */,
 			);
-			name = BViewController;
-			path = "../../../参考/MainProject-master/MainProject/BViewController";
+			path = BViewController;
 			sourceTree = "<group>";
 		};
-		6638CC5F22AE3ABC00208301 /* Tagerts */ = {
+		66CBEE1222B3BA5C00375D7A /* Targets */ = {
 			isa = PBXGroup;
 			children = (
-				6638CC6022AE3AD300208301 /* Target_B.h */,
-				6638CC6122AE3AD300208301 /* Target_B.m */,
+				66CBEE1322B3BA7A00375D7A /* Target_B.h */,
+				66CBEE1422B3BA7A00375D7A /* Target_B.m */,
 			);
-			path = Tagerts;
+			path = Targets;
 			sourceTree = "<group>";
 		};
 		C35B76DEE7EAC0F44EE5AA53 /* Pods */ = {
@@ -311,6 +313,7 @@
 			files = (
 				660E24B622A9090900D66438 /* LaunchScreen.storyboard in Resources */,
 				660E24B322A9090900D66438 /* Assets.xcassets in Resources */,
+				66CBEE0A22B3B47F00375D7A /* ModuleData.plist in Resources */,
 				660E24B122A9090800D66438 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,9 +457,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				660E24AE22A9090800D66438 /* ViewController.m in Sources */,
+				66CBEE1122B3BA5200375D7A /* BViewController.m in Sources */,
+				66CBEE1522B3BA7A00375D7A /* Target_B.m in Sources */,
 				660E24B922A9090900D66438 /* main.m in Sources */,
-				6638CC6222AE3AD300208301 /* Target_B.m in Sources */,
-				660E256322A921FC00D66438 /* BViewController.m in Sources */,
 				660E24AB22A9090800D66438 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
