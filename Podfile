@@ -19,6 +19,10 @@ target 'MainProject' do
   
   pod 'HandyFrame'
 
+  # auto input depend start
+
+  # auto input depend end
+  
   target 'MainProjectTests' do
     inherit! :search_paths
     # Pods for testing

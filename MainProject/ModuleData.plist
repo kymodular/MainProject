@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>modules</key>
-	<array>
-		<dict>
-			<key>name</key>
-			<string>RNModule</string>
-			<key>description</key>
-			<string>RN运行环境组件</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>A示例组件</string>
-			<key>description</key>
-			<string>演示组件间依赖</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>D示例组件</string>
-			<key>description</key>
-			<string>演示加入swift组件</string>
-		</dict>
-	</array>
-</dict>
+<array>
+	<dict>
+		<key>description</key>
+		<string>RN运行环境组件</string>
+		<key>moduleName</key>
+		<string>RNModule</string>
+		<key>name</key>
+		<string>RNModule</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>演示组件间依赖</string>
+		<key>moduleName</key>
+		<string>A</string>
+		<key>name</key>
+		<string>A示例组件</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>演示加入swift组件</string>
+		<key>moduleName</key>
+		<string>D</string>
+		<key>name</key>
+		<string>D示例组件</string>
+	</dict>
+</array>
 </plist>

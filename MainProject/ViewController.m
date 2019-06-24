@@ -30,6 +30,8 @@ static NSString * const kCellId = @"cell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tableView.tableFooterView = [UIView new];
 }
 
 #pragma mark - UITableViewDataSource
@@ -54,37 +56,34 @@ static NSString * const kCellId = @"cell";
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-        {
-        UIViewController *viewController = [[CTMediator sharedInstance] RNModule_viewController];
-        [self.navigationController pushViewController:viewController animated:YES];
-        }
-        break;
-        case 1:
-        {
-        UIViewController *viewController = [[CTMediator sharedInstance] A_aViewController];
-        [self.navigationController pushViewController:viewController animated:YES];
-        }
-        break;
-        case 2:
-        {
-        UIViewController *viewController = [[CTMediator sharedInstance] D_viewController];
-        [self.navigationController pushViewController:viewController animated:YES];
-        }
-        break;
-        default:
-        break;
+    UIViewController *viewController = nil;
+    NSDictionary *item = self.data[indexPath.row];
+    NSString *moduleName = item[@"moduleName"];
+    if ([moduleName isEqualToString:@"RNModule"]) {
+        viewController = [[CTMediator sharedInstance] RNModule_viewController];
+    } else if ([moduleName isEqualToString:@"A"]){
+        viewController = [[CTMediator sharedInstance] A_aViewController];
+    } else if ([moduleName isEqualToString:@"D"]){
+        viewController = [[CTMediator sharedInstance] D_viewController];
+    } else {
+        NSString *selecterNameStr = [NSString stringWithFormat:@"%@_viewControllerWithContentText:", item[@"moduleName"]];
+        SEL selecter = NSSelectorFromString(selecterNameStr);
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        viewController = [[CTMediator sharedInstance] performSelector:selecter withObject:item[@"name"]];
+#pragma clang diagnostic pop
     }
+
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - getters and setters
 - (NSArray *)data {
     if (_data == nil) {
         NSURL *moduleDataUrl = [[NSBundle mainBundle] URLForResource:@"ModuleData" withExtension:@"plist"];
-        NSDictionary *moduleDataDict = [NSDictionary dictionaryWithContentsOfURL:moduleDataUrl];
-        if (moduleDataDict) {
-            _data = [moduleDataDict objectForKey:@"modules"];
+        NSArray *moduleDataArray = [NSArray arrayWithContentsOfURL:moduleDataUrl];
+        if (moduleDataArray) {
+            _data = moduleDataArray;
         } else {
             _data = @[];
         }
