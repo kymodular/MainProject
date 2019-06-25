@@ -4,7 +4,11 @@
 SECONDS=0
 
 # 时间
-DATE=`date '+%Y-%m-%d-%H-%m-%S'`
+getDate() {
+date=`date '+%Y-%m-%d-%H-%m-%S'`
+return $date;
+}
+
 
 category_template_git="https://github.com/kymodular/category-pod-template.git"
 module_template_git="https://github.com/kymodular/module-pod-template.git"
