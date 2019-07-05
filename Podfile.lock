@@ -12,8 +12,8 @@ PODS:
   - D_Category (2):
     - CTMediator
   - DoubleConversion (1.1.6)
-  - FlutterModule (0.1.0)
-  - FlutterModule_Category (0.1.0):
+  - FlutterModule (3)
+  - FlutterModule_Category (2):
     - CTMediator
   - Folly (2018.10.22.00):
     - boost-for-react-native
@@ -82,8 +82,8 @@ DEPENDENCIES:
   - A_Category
   - D
   - D_Category
-  - FlutterModule (from `../FlutterModule/`)
-  - FlutterModule_Category (from `../FlutterModule_Category/`)
+  - FlutterModule
+  - FlutterModule_Category
   - HandyFrame
   - RNModule
   - RNModule_Category
@@ -100,18 +100,14 @@ SPEC REPOS:
     - D
     - D_Category
     - DoubleConversion
+    - FlutterModule
+    - FlutterModule_Category
     - Folly
     - glog
     - React
     - RNModule
     - RNModule_Category
     - yoga
-
-EXTERNAL SOURCES:
-  FlutterModule:
-    :path: "../FlutterModule/"
-  FlutterModule_Category:
-    :path: "../FlutterModule_Category/"
 
 SPEC CHECKSUMS:
   A: 53b16c8e8f8a27048f2c248e9a1d92152319bc3c
@@ -122,8 +118,8 @@ SPEC CHECKSUMS:
   D: f44bee26c34e4fb9cdcddad7aedc51938d40d5e7
   D_Category: bb97c01727c4ead45ee1799b308e9f7822490ff3
   DoubleConversion: f667477bface883238976991f46105fcacc96d56
-  FlutterModule: d2da12af04c07f90fe538f8397676c45acb86ed8
-  FlutterModule_Category: be80c76d6a1583002c49c7144e618341e30f533a
+  FlutterModule: 37a79e34dff94fd4a801954dbab557f117e74968
+  FlutterModule_Category: 9181cd2b359fbb99235eb9dc90f82cda307ce5e5
   Folly: 391015f9b49dcda4ab622abb43ee71ab77c96269
   glog: f67a3d5e31bc6f31211e12ae7b2dfe87aa95c474
   HandyFrame: 437df83ba7563c56cd55b9bd0128561995463110
@@ -132,6 +128,6 @@ SPEC CHECKSUMS:
   RNModule_Category: e6ea636501bc1ab5c725d63af074a132c37e0c35
   yoga: add25c5694c2e5cd322c007b14dbf4802308cee7
 
-PODFILE CHECKSUM: e9dda43d3250b4865f5c0f28fe28c59ffe5d68eb
+PODFILE CHECKSUM: ca9ac6124d3b4b1f40db1af94c37bf0ac2ce9da0
 
 COCOAPODS: 1.6.1
