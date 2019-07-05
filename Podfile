@@ -21,6 +21,8 @@ target 'MainProject' do
 
   # auto input depend start
 
+pod "FlutterModule_Category", :path => "../FlutterModule_Category/"
+pod "FlutterModule", :path => "../FlutterModule/"
   # auto input depend end
   
   target 'MainProjectTests' do

@@ -4,6 +4,14 @@
 <array>
 	<dict>
 		<key>description</key>
+		<string>auto add</string>
+		<key>moduleName</key>
+		<string>FlutterModule</string>
+		<key>name</key>
+		<string>FlutterModule</string>
+	</dict>
+	<dict>
+		<key>description</key>
 		<string>RN运行环境组件</string>
 		<key>moduleName</key>
 		<string>RNModule</string>

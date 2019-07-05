@@ -1,15 +1,5 @@
 #!/bin/bash
 
-# 计时
-SECONDS=0
-
-# 时间
-getDate() {
-date=`date '+%Y-%m-%d-%H-%m-%S'`
-return $date;
-}
-
-
 category_template_git="https://github.com/kymodular/category-pod-template.git"
 module_template_git="https://github.com/kymodular/module-pod-template.git"
 
@@ -25,7 +15,7 @@ pod lib create $module_name --template-url=$module_template_git
 
 cd ./MainProject/
 
-plistPath="./MainProject/ModuleData.plist" 
+plistPath="./MainProject/ModuleData.plist"
 
 /usr/libexec/PlistBuddy \
 -c "add :0 dict" \
@@ -46,4 +36,6 @@ $podCommandModule
 " Podfile
 
 pod install
+
+
 
